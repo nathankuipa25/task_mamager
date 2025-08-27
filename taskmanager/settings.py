@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*7d8y7(scjmx86r$c0+mdo4w+wp7tyuuk7^pgad5f1l4zp7#o_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://taskapi-2mgl.onrender.com']
-CSRF_TRUSTED_ORIGINS = [
-    "https://taskapi-2mgl.onrender.com"
-]
+ALLOWED_HOSTS = [*]
+#CSRF_TRUSTED_ORIGINS = [
+#    "https://taskapi-2mgl.onrender.com"
+#]
 
 # Application definition
 
@@ -121,12 +121,17 @@ USE_I18N = True
 
 USE_TZ = True
 
-k
+k]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# ✅ Append slash (optional)
+APPEND_SLASH = True
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
