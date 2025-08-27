@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*7d8y7(scjmx86r$c0+mdo4w+wp7tyuuk7^pgad5f1l4zp7#o_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 #CSRF_TRUSTED_ORIGINS = [
@@ -83,11 +83,15 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import os
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("postgresql://taskapidatabase_user:B1Dqxl04cdxrL5wqMqWL6VS1q0uQlinw@dpg-d2noja3ipnbc73cpcmrg-a/taskapidatabase"),
+        conn_max_age=600,
+        ssl_require=True,
+    )
 }
 
 
