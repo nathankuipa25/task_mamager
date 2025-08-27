@@ -88,7 +88,7 @@ import dj_database_url
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("postgresql://taskapidatabase_user:B1Dqxl04cdxrL5wqMqWL6VS1q0uQlinw@dpg-d2noja3ipnbc73cpcmrg-a/taskapidatabase"),
+        default=os.environ.get(DATABASE_URL),
         conn_max_age=600,
         ssl_require=True,
     )
