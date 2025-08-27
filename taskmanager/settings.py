@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-*7d8y7(scjmx86r$c0+mdo4w+wp7tyuuk7^pgad5f1l4zp7#o_
 DEBUG = False
 
 ALLOWED_HOSTS = ['https://taskapi-2mgl.onrender.com']
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://taskapi-2mgl.onrender.com"
+]
 
 # Application definition
 
@@ -119,7 +121,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+k
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
