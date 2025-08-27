@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*7d8y7(scjmx86r$c0+mdo4w+wp7tyuuk7^pgad5f1l4zp7#o_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://taskapi-2mgl.onrender.com"]
 CSRF_TRUSTED_ORIGINS = [
