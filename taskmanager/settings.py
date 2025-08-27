@@ -25,10 +25,10 @@ SECRET_KEY = 'django-insecure-*7d8y7(scjmx86r$c0+mdo4w+wp7tyuuk7^pgad5f1l4zp7#o_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://taskaapi.onrender.com"]
-CSRF_TRUSTED_ORIGINS = [
-    "https://taskaapi.onrender.com"
-]
+ALLOWED_HOSTS = ["*"]
+#CSRF_TRUSTED_ORIGINS = [
+#    "https://taskapi-2mgl.onrender.com"
+#]
 
 # Application definition
 
