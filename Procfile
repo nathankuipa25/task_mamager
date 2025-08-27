@@ -1,1 +1,2 @@
-web: python manage.py makemigrations && python manage.py migrate && gunicorn taskmanager.wsgi:application
+release: python manage.py migrate
+web: gunicorn taskmanager.wsgi:application
