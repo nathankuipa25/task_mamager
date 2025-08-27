@@ -1,0 +1,9 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+django-filter
+pillow
+gunicorn
+whitenoise
+
+
